@@ -61,15 +61,16 @@
       margin: 28px 0;
     }
 
-    .nav a {
-      display: block;
-      padding: 6px 0;
-      margin-bottom: 16px;
-      text-decoration: none;
-      color: var(--accent);
-      font-size: 1.1rem;
-      position: relative;
-    }
+.nav a {
+  display: block;
+  padding: 6px 0;
+  margin-bottom: 16px;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  color: var(--accent);
+  font-size: 1.1rem;
+}
 
     .nav a::after {
       content: "";
@@ -88,6 +89,7 @@
 
     .nav a.active {
       font-style: italic;
+      text-decoration-thickness: 2px;
     }
 
     /* ---------- Main Content ---------- */
