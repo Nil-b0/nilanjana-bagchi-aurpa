@@ -1,157 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Nilanjana Bagchi | Research Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>Nilanjana Bagchi Aurpa</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #f8f9fa;
-      color: #212529;
-      line-height: 1.6;
-      padding: 2rem;
-    }
-    .container {
-      max-width: 1000px;
-      margin: auto;
-    }
-    .banner {
-      width: 100%;
-      height: 280px;
-      background: url('https://upload.wikimedia.org/wikipedia/commons/0/00/Center_of_the_Milky_Way_Galaxy_IV_%E2%80%93_Composite.jpg') center center / cover no-repeat;
-      border-radius: 1rem;
-      margin-bottom: 2rem;
-    }
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-      color: #343a40;
-    }
-    p.lead {
-      font-size: 1.2rem;
-      margin-bottom: 1.5rem;
-    }
-    h2 {
-      font-size: 1.6rem;
-      margin-top: 2rem;
-      color: #495057;
+    :root {
+      --bg: #f4f1ec;
+      --ink: #2b2a28;
+      --muted: #6f675e;
+      --accent: #4a3b2f;
+      --rule: #c9c4bb;
     }
 
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2rem;
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'EB Garamond', Georgia, serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.65;
+      font-size: 18px;
     }
-    .card {
-      padding: 2rem;
-      background: #ffffff;
-      border: 2px solid #003366;
-      border-radius: 1rem;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      transition: transform 0.2s ease;
-      text-align: left;
+
+    .page {
+      display: flex;
+      min-height: 100vh;
     }
-    .card:hover {
-      transform: translateY(-4px);
+
+    /* Sidebar */
+    .sidebar {
+      width: 230px;
+      padding: 40px 24px;
+      border-right: 1px solid var(--rule);
     }
-    .card h3 {
-      margin-bottom: 1rem;
-      font-size: 1.4rem;
-      color: #003366;
+
+    .portrait {
+      width: 100%;
+      margin-bottom: 30px;
+      filter: grayscale(100%);
+      border-radius: 2px;
     }
-    .card p {
-      font-size: 1rem;
-      color: #333;
-    }
-    .card a {
-      text-decoration: none;
-      color: inherit;
+
+    .nav a {
       display: block;
-      height: 100%;
+      margin-bottom: 14px;
+      text-decoration: none;
+      color: var(--accent);
+      font-size: 1.05rem;
+    }
+
+    .nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Main content */
+    .content {
+      max-width: 820px;
+      padding: 60px;
+    }
+
+    h1 {
+      font-size: 2.6rem;
+      font-weight: normal;
+      margin-top: 0;
+      margin-bottom: 0.3em;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      font-weight: normal;
+      margin-top: 2.4em;
+      margin-bottom: 0.6em;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 0.2em;
+    }
+
+    p { margin-bottom: 1em; }
+
+    .meta {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .research-block {
+      margin-bottom: 1.4em;
     }
 
     footer {
-      margin-top: 4rem;
-      font-size: 0.9rem;
-      color: #868e96;
-      text-align: center;
+      margin-top: 4em;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .page { flex-direction: column; }
+      .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid var(--rule);
+        display: flex;
+        gap: 20px;
+        align-items: center;
+      }
+      .portrait { width: 120px; margin-bottom: 0; }
+      .nav { display: flex; flex-wrap: wrap; gap: 14px; }
+      .nav a { margin-bottom: 0; }
+      .content { padding: 40px 24px; }
     }
   </style>
 </head>
+
 <body>
-  <div class="container">
-    <div class="banner"></div>
-   <h1>Nilanjana Bagchi</h1>
 
-<p class="lead">
-Undergraduate Physics | Cosmology & Bayesian Inference
-</p>
+<div class="page">
 
-<p>
-Miranda House, University of Delhi<br>
-Email: <a href="mailto:nbagchi01@gmail.com">nbagchi01@gmail.com</a> |
-<a href="CV.pdf">CV (PDF)</a> |
-<a href="https://github.com/Nil-b0">GitHub</a>
-</p>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <img src="me-bw.jpg" alt="Portrait of Nilanjana Bagchi Aurpa" class="portrait">
 
-<p>
-My research focuses on observational cosmology, including statistical
-reconstructions of cosmological observables, gamma-ray bursts as
-high-redshift probes, and Bayesian and machine-learning–based inference
-methods. This site collects my ongoing and public research work.
-</p>
+    <nav class="nav">
+      <a href="intro.html">Home</a>
+      <a href="cosmology.html">Cosmology</a>
+      <a href="grb.html">Gamma-Ray Bursts</a>
+      <a href="fisher.html">Fisher Information</a>
+      <a href="gp.html">Gaussian Processes</a>
+      <a href="CV.pdf">CV</a>
+    </nav>
+  </aside>
 
-<h2>Research & Preprints</h2>
-<div class="card">
-  <a href="dark-energy.html">
-    <h3>Dark Energy & Expansion History</h3>
-    <p>
-      Non-parametric reconstructions of H(z), q(z), and w(z) using
-      Pantheon+, BAO, and cosmic chronometer datasets.
+  <!-- Main content -->
+  <main class="content">
+
+    <h1>Nilanjana Bagchi Aurpa</h1>
+
+    <p class="meta">
+      Undergraduate Physics Student<br>
+      Miranda House, University of Delhi
     </p>
-  </a>
-</div>
 
-<div class="card">
-  <a href="https://nil-b0.github.io/GaussianProcess/">
-    <h3>Gaussian Process Modeling</h3>
-    <p>
-      Custom Gaussian Process pipelines for cosmological data analysis
-      with uncertainty propagation and kernel studies.
+    <p class="meta">
+      Email: <a href="mailto:nbagchi01@gmail.com">nbagchi01@gmail.com</a> ·
+      <a href="https://github.com/Nil-b0">GitHub</a>
     </p>
-  </a>
-</div>
 
-<div class="card">
-  <a href="gamma-ray-bursts.html">
-    <h3>Gamma-Ray Bursts</h3>
-    <p>
-      Calibration, luminosity correlations, and machine-learning
-      approaches for GRBs as cosmological probes.
-    </p>
-  </a>
-</div>
+    <h2>Research Interests</h2>
 
-<div class="card">
-  <a href="quantum-mechanics.html">
-    <h3>Quantum Information & Cosmology</h3>
     <p>
-      Classical and quantum Fisher information analyses with applications
-      to cosmological parameter inference.
+      Observational cosmology; gamma-ray bursts as high-redshift probes; statistical
+      reconstruction of cosmological observables; Bayesian inference; machine-learning
+      methods in cosmology; information-theoretic approaches to parameter estimation.
     </p>
-  </a>
+
+    <h2>Research Overview</h2>
+
+    <div class="research-block">
+      <strong>Cosmological Expansion History</strong><br>
+      Non-parametric reconstruction of H(z), q(z), and dark energy equation-of-state
+      parameters using supernovae, BAO, and cosmic chronometer data.
+      (<a href="cosmology.html">details</a>)
+    </div>
+
+    <div class="research-block">
+      <strong>Gaussian Process Inference</strong><br>
+      Development and application of Gaussian Process methods for cosmological data
+      analysis, including kernel studies and uncertainty propagation.
+      (<a href="gp.html">details</a>)
+    </div>
+
+    <div class="research-block">
+      <strong>Gamma-Ray Bursts for Cosmology</strong><br>
+      Calibration of GRB luminosity correlations using Bayesian and machine-learning
+      techniques to test their viability as high-redshift cosmological probes.
+      (<a href="grb.html">details</a>)
+    </div>
+
+    <div class="research-block">
+      <strong>Classical and Quantum Fisher Information</strong><br>
+      Comparison of classical Fisher information derived from cosmological likelihoods
+      with quantum Fisher bounds, including noise effects and realistic data models.
+      (<a href="fisher.html">details</a>)
+    </div>
+
+    <h2>Preprints and Manuscripts</h2>
+
+    <p>
+      <strong>Classical and Quantum Fisher Information with Cosmological Likelihoods</strong><br>
+      N. B. Aurpa, A. D. Habib, N. Rani<br>
+      Manuscript in preparation.
+    </p>
+
+    <footer>
+      © 2025 Nilanjana Bagchi Aurpa · GitHub Pages
+    </footer>
+
+  </main>
+
 </div>
-<footer>
-  © 2025 Nilanjana Bagchi · Hosted on GitHub Pages
-</footer>
 
 </body>
 </html>
+
