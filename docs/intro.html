@@ -5,15 +5,16 @@
   <title>Nilanjana Bagchi Aurpa</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- Dark academia serif -->
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --bg: #f4f1ec;
-      --ink: #2b2a28;
-      --muted: #6f675e;
-      --accent: #4a3b2f;
-      --rule: #c9c4bb;
+      --bg: #f4f1ec;        /* parchment */
+      --ink: #2b2a28;       /* ink */
+      --muted: #6f675e;     /* muted text */
+      --accent: #4a3b2f;    /* leather brown */
+      --rule: #c9c4bb;      /* divider */
     }
 
     * { box-sizing: border-box; }
@@ -23,8 +24,8 @@
       font-family: 'EB Garamond', Georgia, serif;
       background: var(--bg);
       color: var(--ink);
-      line-height: 1.65;
       font-size: 18px;
+      line-height: 1.65;
     }
 
     .page {
@@ -32,36 +33,68 @@
       min-height: 100vh;
     }
 
-    /* Sidebar */
+    /* ---------- Sidebar ---------- */
+
     .sidebar {
-      width: 230px;
-      padding: 40px 24px;
+      width: 340px;
+      padding: 48px 36px;
       border-right: 1px solid var(--rule);
+      background: var(--bg);
+    }
+
+    .portrait-wrap {
+      display: flex;
+      justify-content: flex-end;
     }
 
     .portrait {
-      width: 100%;
-      margin-bottom: 30px;
+      width: 150px;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
       filter: grayscale(100%);
-      border-radius: 2px;
+      border-radius: 50%;
+    }
+
+    .nav-rule {
+      border: none;
+      border-top: 1px solid var(--rule);
+      margin: 28px 0;
     }
 
     .nav a {
       display: block;
-      margin-bottom: 14px;
+      padding: 6px 0;
+      margin-bottom: 16px;
       text-decoration: none;
       color: var(--accent);
-      font-size: 1.05rem;
+      font-size: 1.1rem;
+      position: relative;
     }
 
-    .nav a:hover {
-      text-decoration: underline;
+    .nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0%;
+      height: 1px;
+      background: var(--accent);
+      transition: width 0.25s ease;
     }
 
-    /* Main content */
+    .nav a:hover::after {
+      width: 100%;
+    }
+
+    .nav a.active {
+      font-style: italic;
+    }
+
+    /* ---------- Main Content ---------- */
+
     .content {
-      max-width: 820px;
-      padding: 60px;
+      max-width: 760px;
+      padding: 64px;
     }
 
     h1 {
@@ -83,8 +116,8 @@
     p { margin-bottom: 1em; }
 
     .meta {
-      color: var(--muted);
       font-size: 0.95rem;
+      color: var(--muted);
     }
 
     a {
@@ -92,9 +125,7 @@
       text-decoration: none;
     }
 
-    a:hover {
-      text-decoration: underline;
-    }
+    a:hover { text-decoration: underline; }
 
     .research-block {
       margin-bottom: 1.4em;
@@ -106,21 +137,45 @@
       color: var(--muted);
     }
 
-    /* Responsive */
+    /* ---------- Responsive ---------- */
+
     @media (max-width: 900px) {
       .page { flex-direction: column; }
+
       .sidebar {
         width: 100%;
         border-right: none;
         border-bottom: 1px solid var(--rule);
         display: flex;
-        gap: 20px;
         align-items: center;
+        gap: 20px;
       }
-      .portrait { width: 120px; margin-bottom: 0; }
-      .nav { display: flex; flex-wrap: wrap; gap: 14px; }
-      .nav a { margin-bottom: 0; }
-      .content { padding: 40px 24px; }
+
+      .portrait-wrap {
+        justify-content: flex-start;
+      }
+
+      .portrait {
+        width: 120px;
+      }
+
+      .nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+      }
+
+      .nav a {
+        margin-bottom: 0;
+      }
+
+      .nav-rule {
+        display: none;
+      }
+
+      .content {
+        padding: 40px 24px;
+      }
     }
   </style>
 </head>
@@ -131,10 +186,14 @@
 
   <!-- Sidebar -->
   <aside class="sidebar">
-    <img src="me-bw.jpg" alt="Portrait of Nilanjana Bagchi Aurpa" class="portrait">
+    <div class="portrait-wrap">
+      <img src="me-bw.jpg" alt="Portrait of Nilanjana Bagchi Aurpa" class="portrait">
+    </div>
+
+    <hr class="nav-rule">
 
     <nav class="nav">
-      <a href="intro.html">Home</a>
+      <a href="intro.html" class="active">Home</a>
       <a href="cosmology.html">Cosmology</a>
       <a href="grb.html">Gamma-Ray Bursts</a>
       <a href="fisher.html">Fisher Information</a>
@@ -172,28 +231,24 @@
       <strong>Cosmological Expansion History</strong><br>
       Non-parametric reconstruction of H(z), q(z), and dark energy equation-of-state
       parameters using supernovae, BAO, and cosmic chronometer data.
-      (<a href="cosmology.html">details</a>)
     </div>
 
     <div class="research-block">
       <strong>Gaussian Process Inference</strong><br>
       Development and application of Gaussian Process methods for cosmological data
       analysis, including kernel studies and uncertainty propagation.
-      (<a href="gp.html">details</a>)
     </div>
 
     <div class="research-block">
       <strong>Gamma-Ray Bursts for Cosmology</strong><br>
       Calibration of GRB luminosity correlations using Bayesian and machine-learning
-      techniques to test their viability as high-redshift cosmological probes.
-      (<a href="grb.html">details</a>)
+      techniques to assess their viability as high-redshift cosmological probes.
     </div>
 
     <div class="research-block">
       <strong>Classical and Quantum Fisher Information</strong><br>
       Comparison of classical Fisher information derived from cosmological likelihoods
       with quantum Fisher bounds, including noise effects and realistic data models.
-      (<a href="fisher.html">details</a>)
     </div>
 
     <h2>Preprints and Manuscripts</h2>
@@ -214,4 +269,5 @@
 
 </body>
 </html>
+
 
