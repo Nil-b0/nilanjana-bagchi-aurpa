@@ -5,181 +5,11 @@
   <title>Nilanjana Bagchi Aurpa</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Dark academia serif -->
+  <!-- Serif -->
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
 
-  <style>
-    :root {
-      --bg: #f4f1ec;        /* parchment */
-      --ink: #2b2a28;       /* ink */
-      --muted: #6f675e;     /* muted text */
-      --accent: #4a3b2f;    /* leather brown */
-      --rule: #c9c4bb;      /* divider */
-    }
-
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      font-family: 'EB Garamond', Georgia, serif;
-      background: var(--bg);
-      color: var(--ink);
-      font-size: 18px;
-      line-height: 1.65;
-    }
-
-    .page {
-      display: flex;
-      min-height: 100vh;
-    }
-
-    /* ---------- Sidebar ---------- */
-
-    .sidebar {
-      width: 340px;
-      padding: 48px 36px;
-      border-right: 1px solid var(--rule);
-      background: var(--bg);
-    }
-
-    .portrait-wrap {
-      display: flex;
-      justify-content: flex-end;
-    }
-
-    .portrait {
-      width: 150px;
-      aspect-ratio: 1 / 1;
-      object-fit: cover;
-      filter: grayscale(100%);
-      border-radius: 50%;
-    }
-
-    .nav-rule {
-      border: none;
-      border-top: 1px solid var(--rule);
-      margin: 28px 0;
-    }
-
-.nav a {
-  display: block;
-  padding: 6px 0;
-  margin-bottom: 16px;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 4px;
-  color: var(--accent);
-  font-size: 1.1rem;
-}
-
-    .nav a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 0%;
-      height: 1px;
-      background: var(--accent);
-      transition: width 0.25s ease;
-    }
-
-    .nav a:hover::after {
-      width: 100%;
-    }
-
-    .nav a.active {
-      font-style: italic;
-      text-decoration-thickness: 2px;
-    }
-
-    /* ---------- Main Content ---------- */
-
-    .content {
-      max-width: 760px;
-      padding: 64px;
-    }
-
-    h1 {
-      font-size: 2.6rem;
-      font-weight: normal;
-      margin-top: 0;
-      margin-bottom: 0.3em;
-    }
-
-    h2 {
-      font-size: 1.4rem;
-      font-weight: normal;
-      margin-top: 2.4em;
-      margin-bottom: 0.6em;
-      border-bottom: 1px solid var(--rule);
-      padding-bottom: 0.2em;
-    }
-
-    p { margin-bottom: 1em; }
-
-    .meta {
-      font-size: 0.95rem;
-      color: var(--muted);
-    }
-
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    a:hover { text-decoration: underline; }
-
-    .research-block {
-      margin-bottom: 1.4em;
-    }
-
-    footer {
-      margin-top: 4em;
-      font-size: 0.85rem;
-      color: var(--muted);
-    }
-
-    /* ---------- Responsive ---------- */
-
-    @media (max-width: 900px) {
-      .page { flex-direction: column; }
-
-      .sidebar {
-        width: 100%;
-        border-right: none;
-        border-bottom: 1px solid var(--rule);
-        display: flex;
-        align-items: center;
-        gap: 20px;
-      }
-
-      .portrait-wrap {
-        justify-content: flex-start;
-      }
-
-      .portrait {
-        width: 120px;
-      }
-
-      .nav {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 14px;
-      }
-
-      .nav a {
-        margin-bottom: 0;
-      }
-
-      .nav-rule {
-        display: none;
-      }
-
-      .content {
-        padding: 40px 24px;
-      }
-    }
-  </style>
+  <!-- Page-specific stylesheet -->
+  <link rel="stylesheet" href="introstyle.css">
 </head>
 
 <body>
@@ -200,7 +30,8 @@
       <a href="grb.html">Gamma-Ray Bursts</a>
       <a href="fisher.html">Fisher Information</a>
       <a href="gp.html">Gaussian Processes</a>
-      <a href="CV.pdf">CV</a>
+      <a href="https://drive.google.com/file/d/1Sb5-3tzt0GXGGRjbzR6qQgX7HYYSzuBg/view?usp=sharing"
+         target="_blank" rel="noopener">CV</a>
     </nav>
   </aside>
 
@@ -216,7 +47,7 @@
 
     <p class="meta">
       Email: <a href="mailto:nbagchi01@gmail.com">nbagchi01@gmail.com</a> ·
-      <a href="https://github.com/Nil-b0">GitHub</a>
+      <a href="https://github.com/Nil-b0" target="_blank" rel="noopener">GitHub</a>
     </p>
 
     <h2>Research Interests</h2>
@@ -256,7 +87,7 @@
     <h2>Preprints and Manuscripts</h2>
 
     <p>
-      <strong>Classical and Quantum Fisher Information with Cosmological Likelihoods</strong><br>
+      <strong>Gamma Ray Burst Calibration with Artificial and Bayesian Neural Network</strong><br>
       N. B. Aurpa, A. D. Habib, N. Rani<br>
       Manuscript in preparation.
     </p>
@@ -271,5 +102,3 @@
 
 </body>
 </html>
-
-
