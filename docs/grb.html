@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gamma-Ray Bursts | Nilanjana Bagchi Aurpa</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Serif -->
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+
+  <!-- Page-specific stylesheet -->
+  <link rel="stylesheet" href="grbstyle.css">
+</head>
+
+<body>
+
+<div class="page">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <nav class="nav">
+      <a href="intro.html">Home</a>
+      <a href="cosmology.html">Cosmology</a>
+      <a href="grb.html" class="active">Gamma-Ray Bursts</a>
+      <a href="fisher.html">Fisher Information</a>
+      <a href="gp.html">Gaussian Processes</a>
+      <a href="CV.pdf">CV</a>
+    </nav>
+  </aside>
+
+  <!-- Main content -->
+  <main class="content">
+
+    <h1>Gamma-Ray Bursts as Cosmological Probes</h1>
+
+    <p>
+      My research focuses on the calibration of long Gamma-Ray Bursts (GRBs) as
+      high-redshift cosmological probes, with particular emphasis on machine-learning–
+      based approaches and Bayesian inference.
+    </p>
+
+    <h2>Motivation</h2>
+
+    <p>
+      GRBs extend well beyond the redshift reach of Type Ia supernovae, but their
+      intrinsic luminosity dispersion and the associated circularity problem limit
+      direct cosmological application. Robust calibration methods are therefore
+      essential for extracting reliable cosmological constraints.
+    </p>
+
+    <h2>Neural-Network Framework</h2>
+
+    <!-- ANN architecture -->
+    <div class="figure">
+      <img src="ann-model.png" alt="ANN architecture for GRB calibration" class="figure-img">
+      <div class="caption">
+        Figure 1 — Artificial Neural Network architecture used for GRB calibration.
+      </div>
+    </div>
+
+    <!-- ANN–BNN workflow -->
+    <div class="figure">
+      <img src="ann-bnn.png" alt="ANN vs BNN workflow comparison" class="figure-img">
+      <div class="caption">
+        Figure 2 — ANN–BNN workflow highlighting deterministic and Bayesian inference paths.
+      </div>
+    </div>
+
+    <!-- BNN H(z) reconstruction -->
+    <div class="figure">
+      <img src="bnn-hz.png" alt="BNN-based H(z) reconstruction" class="figure-img">
+      <div class="caption">
+        Figure 3 — H(z) reconstruction using Bayesian Neural Networks with uncertainty propagation.
+      </div>
+    </div>
+
+    <h2>Machine-Learning–Based Calibration</h2>
+
+    <p>
+      Artificial Neural Networks (ANNs) and Bayesian Neural Networks (BNNs) were
+      developed to reconstruct the Hubble parameter and calibrate GRB luminosity
+      correlations without assuming a fiducial cosmological model.
+    </p>
+
+    <p>
+      Bayesian Neural Networks enable direct propagation of epistemic uncertainty
+      into reconstructed observables, providing statistically consistent error
+      estimates for subsequent cosmological inference.
+    </p>
+
+    <h2>Bayesian Inference and Cosmological Constraints</h2>
+
+    <p>
+      Calibrated GRB correlations were incorporated into cosmological likelihoods
+      to test dark-energy models and assess sensitivity to key cosmological parameters.
+      Multiple calibration strategies were compared to quantify their impact on
+      inferred cosmology.
+    </p>
+
+    <h2>Current Status</h2>
+
+    <p>
+      A manuscript detailing the machine-learning–based calibration framework and the
+      resulting cosmological constraints has been submitted to arXiv.
+    </p>
+
+    <footer>
+      © 2025 Nilanjana Bagchi Aurpa
+    </footer>
+
+  </main>
+
+</div>
+
+</body>
+</html>
