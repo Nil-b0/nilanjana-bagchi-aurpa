@@ -104,6 +104,12 @@ footer {
   color: var(--muted);
 }
 
+.figure-img {
+  width: 100%;
+  border: 1px solid var(--rule);
+  background: #fff;
+}
+
 /* ---------- Responsive ---------- */
 
 @media (max-width: 900px) {
