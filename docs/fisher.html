@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Classical & Quantum Fisher Information – Nilanjana Bagchi</title>
+
+  <!-- Shared site aesthetic -->
+  <link rel="stylesheet" href="/nilanjana-bagchi-aurpa/introstyle.css">
+</head>
+
+<body>
+
+  <div class="content">
+
+    <h1>
+      Classical and Quantum Fisher Information
+    </h1>
+
+    <p>
+      This project presents a minimal computational framework comparing
+      <em>classical Fisher information</em>, used extensively in cosmological
+      parameter inference, with <em>quantum Fisher information</em> arising
+      from parameterized quantum states.
+    </p>
+
+    <p>
+      Using the Hubble constant <strong>H<sub>0</sub></strong> as a representative
+      cosmological parameter, the work highlights how classical and quantum
+      Cramér–Rao bounds emerge and how quantum information degrades under noise.
+    </p>
+
+    <h2>Conceptual Motivation</h2>
+
+    <p>
+      In cosmology, Fisher information quantifies the sensitivity of observational
+      likelihoods to underlying model parameters and determines local precision
+      bounds. Independently, quantum information theory introduces the Quantum
+      Fisher Information (QFI), which sets the ultimate precision limit for
+      parameters encoded in quantum states.
+    </p>
+
+    <p>
+      Despite their structural similarity, these two quantities are rarely
+      studied together in a transparent computational setting. This project
+      provides a controlled bridge between the two frameworks.
+    </p>
+
+    <h2>Method Overview</h2>
+
+    <p>
+      A toy Gaussian likelihood is constructed for the Hubble constant, yielding
+      a constant classical Fisher information and a fixed classical Cramér–Rao
+      bound.
+    </p>
+
+    <p>
+      The same parameter is encoded into a single-qubit quantum circuit using
+      a parameterized rotation. The Quantum Fisher Information is evaluated
+      analytically and numerically, and extended to mixed states in the presence
+      of depolarizing noise.
+    </p>
+
+    <h2>Results</h2>
+
+    <figure>
+      <img src="plot1.png"
+           alt="Classical and quantum Fisher information in the noiseless limit">
+      <figcaption>
+        <strong>Figure 1 — Classical and Quantum Fisher Information in the Noiseless Limit.</strong>
+        Comparison of the constant classical Fisher information derived from a
+        Gaussian likelihood with the Quantum Fisher Information obtained from an
+        ideal single-qubit parameter encoding.
+      </figcaption>
+    </figure>
+
+    <figure>
+      <img src="plot2.png"
+           alt="Degradation of quantum Fisher information under depolarizing noise">
+      <figcaption>
+        <strong>Figure 2 — Degradation of Quantum Fisher Information under Depolarizing Noise.</strong>
+        Quantum Fisher Information as a function of noise strength, illustrating
+        the monotonic loss of parameter distinguishability as the encoded quantum
+        state approaches a maximally mixed state.
+      </figcaption>
+    </figure>
+
+    <figure>
+      <img src="plot3.png"
+           alt="Comparison of classical and quantum Cramér–Rao bounds">
+      <figcaption>
+        <strong>Figure 3 — Comparison of Classical and Quantum Cramér–Rao Bounds.</strong>
+        Classical and quantum precision bounds for the Hubble constant as a function
+        of noise strength, highlighting the robustness of the classical bound and
+        the degradation of the quantum bound due to decoherence.
+      </figcaption>
+    </figure>
+
+    <h2>Discussion</h2>
+
+    <p>
+      In the noiseless limit, the quantum encoding achieves the expected constant
+      Quantum Fisher Information. As noise strength increases, the available
+      quantum information degrades monotonically, leading to weaker quantum
+      precision bounds, while the classical bound remains unchanged.
+    </p>
+
+    <p>
+      This work does not aim to demonstrate quantum computational advantage or
+      improved cosmological constraints. Instead, it clarifies the structural
+      parallels between classical and quantum information bounds in a minimal,
+      reproducible setting.
+    </p>
+
+    <h2>Project Material</h2>
+
+    <a class="link-button" href="draft.pdf" target="_blank">
+      <strong>Project Draft (PDF)</strong><br>
+      <small>Detailed derivations, figures, and discussion</small>
+    </a>
+
+    <footer>
+      Built by Nilanjana Bagchi — 2025
+    </footer>
+
+  </div>
+
+</body>
+</html>
