@@ -152,4 +152,27 @@ footer {
   .content {
     padding: 40px 24px;
   }
+  .plot-block {
+  margin: 2.5rem 0;
+}
+
+.plot-placeholder {
+  border: 1px dashed #999;
+  padding: 3rem 2rem;
+  text-align: center;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.plot-placeholder span {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.plot-placeholder small {
+  font-size: 0.85rem;
+  color: #888;
+}
+
 }
