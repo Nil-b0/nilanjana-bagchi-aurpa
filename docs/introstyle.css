@@ -20,6 +20,7 @@ body {
 .page {
   display: flex;
   min-height: 100vh;
+  justify-content: center;   /* center whole layout block */
 }
 
 /* ---------- Sidebar ---------- */
@@ -29,11 +30,15 @@ body {
   padding: 48px 36px;
   border-right: 1px solid var(--rule);
   background: var(--bg);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* ✅ vertical centering */
 }
 
 .portrait-wrap {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;   /* centered portrait */
 }
 
 .portrait {
@@ -69,8 +74,14 @@ body {
 /* ---------- Main Content ---------- */
 
 .content {
+  flex: 1;
   max-width: 760px;
   padding: 64px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* ✅ vertical alignment of intro text */
 }
 
 h1 {
@@ -113,6 +124,31 @@ footer {
   color: var(--muted);
 }
 
+/* ---------- Plot Blocks ---------- */
+
+.plot-block {
+  margin: 2.5rem 0;
+}
+
+.plot-placeholder {
+  border: 1px dashed #999;
+  padding: 3rem 2rem;
+  text-align: center;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.plot-placeholder span {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.plot-placeholder small {
+  font-size: 0.85rem;
+  color: #888;
+}
+
 /* ---------- Responsive ---------- */
 
 @media (max-width: 900px) {
@@ -124,6 +160,7 @@ footer {
     border-bottom: 1px solid var(--rule);
     display: flex;
     align-items: center;
+    justify-content: flex-start;
     gap: 20px;
   }
 
@@ -151,28 +188,6 @@ footer {
 
   .content {
     padding: 40px 24px;
+    justify-content: flex-start;  /* normal flow on mobile */
   }
-  .plot-block {
-  margin: 2.5rem 0;
-}
-
-.plot-placeholder {
-  border: 1px dashed #999;
-  padding: 3rem 2rem;
-  text-align: center;
-  color: #666;
-  font-size: 0.95rem;
-}
-
-.plot-placeholder span {
-  display: block;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-
-.plot-placeholder small {
-  font-size: 0.85rem;
-  color: #888;
-}
-
 }
