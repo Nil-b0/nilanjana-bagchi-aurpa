@@ -190,4 +190,13 @@ footer {
     padding: 40px 24px;
     justify-content: flex-start;  /* normal flow on mobile */
   }
+  /* ---------- Figure / Image Sizing ---------- */
+
+.content img {
+  max-width: 90%;
+  height: auto;
+  display: block;
+  margin: 1.5rem auto;
+}
+
 }
