@@ -3,96 +3,120 @@
 <head>
   <meta charset="UTF-8">
   <title>Gamma-Ray Bursts | Nilanjana Bagchi Aurpa</title>
-
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Serif font -->
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+  <!-- Serif -->
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
 
-  <!-- Your main stylesheet -->
+  <!-- Main stylesheet -->
   <link rel="stylesheet" href="introstyle.css">
 </head>
 
 <body>
-  <div class="page">
 
-    <!-- ========== SIDEBAR ========== -->
-    <aside class="sidebar">
+<div class="page">
 
-      <div class="portrait-wrap">
-        <img src="images/profile.jpg" alt="Portrait of Nilanjana Bagchi Aurpa" class="portrait">
-      </div>
+  <!-- ========== Sidebar ========== -->
+  <aside class="sidebar">
+    <nav class="nav">
+      <a href="intro.html">Home</a>
+      <a href="cosmology.html">Cosmology</a>
+      <a href="grb.html" class="active">Gamma-Ray Bursts</a>
+      <a href="fisher.html">Fisher Information</a>
+      <a href="gp.html">Gaussian Processes</a>
+      <a href="CV.pdf">CV</a>
+    </nav>
+  </aside>
 
-      <hr class="nav-rule">
+  <!-- ========== Main content ========== -->
+  <main class="content">
 
-      <nav class="nav">
-        <a href="intro.html">Home</a>
-        <a href="cosmology.html">Cosmology</a>
-        <a href="grb.html" class="active">Gamma-Ray Bursts</a>
-        <a href="fisher.html">Fisher Information</a>
-        <a href="gaussian.html">Gaussian Processes</a>
-      </nav>
+    <h1>Gamma-Ray Bursts as Cosmological Probes</h1>
 
-    </aside>
+    <p>
+      My research focuses on the calibration of long Gamma-Ray Bursts (GRBs) as
+      high-redshift cosmological probes, with particular emphasis on machine-learning–
+      based approaches and Bayesian inference.
+    </p>
 
-    <!-- ========== MAIN CONTENT ========== -->
-    <main class="content">
+    <h2>Motivation</h2>
 
-      <h1>Gamma-Ray Bursts</h1>
+    <p>
+      GRBs extend well beyond the redshift reach of Type Ia supernovae, but their
+      intrinsic luminosity dispersion and the associated circularity problem limit
+      direct cosmological application. Robust calibration methods are therefore
+      essential for extracting reliable cosmological constraints.
+    </p>
 
-      <p class="meta">
-        Observational astrophysics · spectral modeling · machine learning
-      </p>
+    <h2>Neural-Network Framework</h2>
 
-      <p>
-        This project explores the use of neural networks for modeling GRB prompt emission spectra,
-        with the aim of accelerating parameter inference compared to traditional forward-folding
-        likelihood-based methods.
-      </p>
+    <figure class="figure">
+      <img src="annm.png" alt="Artificial neural network architecture for GRB calibration">
+      <figcaption>
+        <strong>Figure 1.</strong> Schematic architecture of the feed-forward artificial neural
+        network used for GRB calibration. Observed GRB features are mapped through hidden
+        layers with nonlinear activations to predict calibrated luminosity indicators.
+      </figcaption>
+    </figure>
 
-      <h2>Neural Network Architecture</h2>
+    <figure class="figure">
+      <img src="ann-bnn.png" alt="Comparison of ANN and BNN inference workflows">
+      <figcaption>
+        <strong>Figure 2.</strong> Comparison of deterministic ANN inference and Bayesian Neural
+        Network (BNN) workflows. While ANNs provide point estimates, BNNs treat network weights
+        probabilistically, enabling direct uncertainty propagation into reconstructed observables.
+      </figcaption>
+    </figure>
 
-      <figure class="figure">
-        <img src="images/nn_architecture.png" alt="Feed-forward neural network architecture diagram">
-        <figcaption>
-          <strong>Figure 1.</strong> Architecture of the feed-forward neural network used for spectral
-          parameter regression. The network consists of an input layer corresponding to binned photon
-          counts, followed by two hidden layers with nonlinear activations, and a single output neuron
-          representing the inferred spectral parameter.
-        </figcaption>
-      </figure>
+    <figure class="figure">
+      <img src="hubble_bnn.png" alt="Reconstruction of Hubble parameter using Bayesian neural network">
+      <figcaption>
+        <strong>Figure 3.</strong> Reconstruction of the Hubble parameter H(z) using Bayesian Neural
+        Networks. Shaded regions indicate predictive uncertainty, incorporating both data noise and
+        epistemic uncertainty from model parameters.
+      </figcaption>
+    </figure>
 
-      <h2>Training Behaviour</h2>
+    <h2>Machine-Learning–Based Calibration</h2>
 
-      <figure class="figure">
-        <img src="images/training_curve.png" alt="Training and validation loss curves">
-        <figcaption>
-          <strong>Figure 2.</strong> Training and validation loss as a function of epoch. Both curves
-          converge smoothly, indicating stable optimization and no strong evidence of overfitting.
-          Small-scale fluctuations arise due to stochastic mini-batch sampling.
-        </figcaption>
-      </figure>
+    <p>
+      Artificial Neural Networks (ANNs) and Bayesian Neural Networks (BNNs) were developed to
+      reconstruct the Hubble parameter and calibrate GRB luminosity correlations without assuming
+      a fiducial cosmological model.
+    </p>
 
-      <h2>Model Performance</h2>
+    <p>
+      Bayesian Neural Networks enable direct propagation of epistemic uncertainty into reconstructed
+      observables, providing statistically consistent error estimates for subsequent cosmological
+      inference.
+    </p>
 
-      <figure class="figure">
-        <img src="images/pred_vs_true.png" alt="Predicted versus true parameter scatter plot">
-        <figcaption>
-          <strong>Figure 3.</strong> Comparison between predicted and true spectral parameters on the
-          validation set. The diagonal line represents perfect agreement. Scatter about the diagonal
-          reflects residual model uncertainty and degeneracies in the spectral shapes.
-        </figcaption>
-      </figure>
+    <h2>Bayesian Inference and Cosmological Constraints</h2>
 
-      <footer>
-        <p>
-          Code and trained models are available on GitHub.  
-          For full technical details, see the associated arXiv preprint.
-        </p>
-      </footer>
+    <p>
+      Calibrated GRB correlations were incorporated into cosmological likelihoods to test dark-energy
+      models and assess sensitivity to key cosmological parameters. Multiple calibration strategies
+      were compared to quantify their impact on inferred cosmology.
+    </p>
 
-    </main>
+    <h2>Publications</h2>
 
-  </div>
+    <p>
+      <strong>Reconstructing Gamma-Ray Burst Energy Relations with Observational H(z) Data in a Neural
+      Network Framework</strong><br>
+      N. B. Aurpa, A. D. Habib, N. Rani<br>
+      <em>arXiv preprint</em>,
+      <a href="https://arxiv.org/abs/2601.08550" target="_blank">arXiv:2601.08550</a>
+    </p>
+
+    <footer>
+      © 2025 Nilanjana Bagchi Aurpa
+    </footer>
+
+  </main>
+
+</div>
+
 </body>
 </html>
+
