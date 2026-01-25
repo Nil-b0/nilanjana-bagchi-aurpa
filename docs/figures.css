@@ -1,0 +1,27 @@
+/* =========================================
+   Hard pixel sizing for figures
+   ========================================= */
+
+figure.figure {
+  width: 420px;          /* 👈 CHANGE THIS NUMBER */
+  margin: 2rem auto;
+}
+
+figure.figure-wide {
+  width: 600px;          /* 👈 for bigger diagrams */
+  margin: 2.5rem auto;
+}
+
+figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* optional caption */
+figcaption {
+  font-size: 0.85rem;
+  color: #666;
+  text-align: center;
+  margin-top: 0.4rem;
+}
