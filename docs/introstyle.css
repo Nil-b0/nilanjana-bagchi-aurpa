@@ -33,8 +33,10 @@ body {
 
   display: flex;
   flex-direction: column;
-  justify-content: center;   /* ✅ vertical centering */
+  align-items: center;      /* keeps things neat horizontally */
+  justify-content: flex-start; /* 👈 NORMAL HUMAN BEHAVIOR */
 }
+
 
 .portrait-wrap {
   display: flex;
