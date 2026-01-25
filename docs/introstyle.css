@@ -194,11 +194,14 @@ footer {
   }
   /* ---------- Figure / Image Sizing ---------- */
 
+/* ---------- Figure sizing (fix oversized figures) ---------- */
+
 .content img {
-  max-width: 90%;
+  max-width: 65%;
   height: auto;
   display: block;
   margin: 1.5rem auto;
 }
+
 
 }
